@@ -1,8 +1,8 @@
 version: "3.8"
 
 services:
-  react-query-builder-demo:
-    container_name: react-query-builder-demo
+  react-query-builder-demo-app:
+    container_name: react-query-builder-demo-dev
     image: app-prod
     build:
       context: .
