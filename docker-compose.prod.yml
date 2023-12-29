@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  infrascan-fe:
+    container_name: infrascan-fe-prod
+    image: app-prod
+    build:
+      context: .
+      target: production
+    ports:
+      - "${PORT}:80"
+      
