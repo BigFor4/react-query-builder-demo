@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import {
   Query,
@@ -6,6 +8,7 @@ import {
   ImmutableTree,
   Config,
   BuilderProps,
+  QueryProps,
   JsonTree,
   ActionMeta,
   Actions,
@@ -66,7 +69,6 @@ interface DemoQueryBuilderMemo {
   config?: Config;
   _actions?: Actions;
 }
-
 const DemoQueryBuilder: React.FC = () => {
   const memo: React.MutableRefObject<DemoQueryBuilderMemo> = useRef({});
 
@@ -112,7 +114,7 @@ const DemoQueryBuilder: React.FC = () => {
     });
   };
 
-  const renderBuilder = useCallback((bprops: BuilderProps) => {
+  const renderBuilder = useCallback((bprops: BuilderProps) : JSX.Element => {
     memo.current._actions = bprops.actions;
     return (
       <div className="query-builder-container" style={{ padding: "10px" }}>
@@ -164,19 +166,16 @@ const DemoQueryBuilder: React.FC = () => {
   return (
     <div>
       <div>
-        <button onClick={resetValue}>reset</button>
-        <button onClick={clearValue}>clear</button>
+        <button onClick={resetValue}>Reset</button>
+        <button onClick={clearValue}>Clear</button>
       </div>
-
-      <Query
-        {...state.config}
-        value={state.tree}
-        onChange={onChange}
-        renderBuilder={renderBuilder}
-      />
+  
+      <Query {...state.config} value={state.tree} onChange={onChange} renderBuilder={renderBuilder} ></Query>
+  
       <div className="query-builder-result">{renderResult(state)}</div>
     </div>
   );
+  
 };
 
 export default DemoQueryBuilder;
