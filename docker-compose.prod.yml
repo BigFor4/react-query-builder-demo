@@ -1,12 +1,12 @@
 version: "3.8"
 
 services:
-  react-query-builder-demo-app:
-    container_name: react-query-builder-demo-dev
+  react-query-builder-demo:
+    container_name:  react-query-builder-demo-prod
     image: app-prod
     build:
       context: .
-      dockerfile: Dockerfile
       target: production
     ports:
       - "8080:80"
+      
