@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   infrascan-fe:
-    container_name: infrascan-fe-prod
+    container_name: react-query-builder-demo
     image: app-prod
     build:
       context: .
