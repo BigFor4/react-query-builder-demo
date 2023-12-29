@@ -9,10 +9,10 @@
     "url": "https://github.com/BigFor4/react-query-builder-antd-input"
   },
   "scripts": {
-    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
-    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
-    "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test --env=jsdom",
-    "eject": "SKIP_PREFLIGHT_CHECK=true react-scripts eject",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "dev": "vite",
     "build-vite": "tsc && vite build --mode dev --debug",
     "serve": "vite preview"
@@ -33,7 +33,7 @@
     "antd": "^4.16.13",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-query-builder-antd-input": "^1.0.5"
+    "react-query-builder-antd-input": "^1.1.0"
   },
   "browserslist": {
     "production": [
